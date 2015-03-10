@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 
-echo "hello there"
+echo -e "hello there\nyou rock!"
