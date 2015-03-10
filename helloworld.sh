@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/usr/bin/bash
 
-echo "hello"
+echo -e "Hello there\nYou rock!"
