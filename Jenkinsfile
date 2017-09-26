@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sleep 5
             }
         }
         stage('Test') {
@@ -16,11 +17,12 @@ pipeline {
                 else
                   echo "Testing passed"
                fi
+               sleep 5
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'Deploying...'
                 sleep 5
                 echo 'Done."
             }
