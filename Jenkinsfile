@@ -1,5 +1,16 @@
+#!/usr/bin/env groovy
+
+
 pipeline {
     agent any
+
+    stages {
+        stage('Example') {
+            steps {
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+            }
+        }
+    }
 
     stages {
         stage('Build') {
@@ -12,12 +23,6 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh "./helloworld.sh"
-                if [ $? -ne 0 ] then
-                  echo "Testing failed :("
-                else
-                  echo "Testing passed"
-               fi
-               sleep 5
             }
         }
         stage('Deploy') {
