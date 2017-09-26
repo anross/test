@@ -29,7 +29,7 @@ pipeline {
             steps {
                 echo 'Deploying...'
                 sleep 5
-                echo 'Done."
+                echo 'Done.'
             }
         }
     }
