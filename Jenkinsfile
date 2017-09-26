@@ -11,13 +11,14 @@ pipeline {
         echo 'Building..'
         sleep 5
         isUnix()
-        pwd(tmp: true)
+        pwd()
       }
     }
     stage('Test') {
       steps {
         echo 'Testing..'
         fileExists 'helloworld.sh'
+        sh 'echo "what goes in a shell script"'
       }
     }
     stage('Deploy') {
